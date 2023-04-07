@@ -20,4 +20,4 @@ jobs:
                   aws-region: us-east-1
 
             - name: Depoy Static Site in S3 Bucket
-              run: aws s3 sync s3://portfolio-tws --delete
+              run: aws s3 sync . s3://portfolio-tws --delete
