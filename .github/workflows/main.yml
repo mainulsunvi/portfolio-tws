@@ -12,7 +12,7 @@ jobs:
             - name: Checkout
               uses: actions/checkout@v1
 
-            - name: Configure AWS Credentials
+            - name: Configure AWS Credientials
               uses: aws-actions/configure-aws-credentials@v1
               with:
                   aws-access-key-id: ${{secrets.AWS_ACCESS_ID}}
@@ -20,4 +20,4 @@ jobs:
                   aws-region: us-east-1
 
             - name: Depoy Static Site in S3 Bucket
-              run: aws s3 sync s3://portfolio-tws --delete
+              run: aws s3 sync . s3://portfolio-tws --delete
